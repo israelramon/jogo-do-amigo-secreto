@@ -9,7 +9,7 @@ function salvarNome() {
     // Implementação de uma validação para garantir que o campo não esteja vazio.
     if (nome == "") {
         // Exibe um alerta pedindo para inserir o nome
-        alert("Por favor, insira um nome");
+        alert("Por favor, insira o seu nome");
     } else {
         // Adiciona o nome à lista de amigos
         listaDeAmigos.push(nome);
@@ -31,7 +31,7 @@ function adicionarAmigo() {
     // Verifica se o campo 'amigo' está vazio
     if (nomeAmigo == "") {
         // Exibe um alerta pedindo para inserir um nome
-        alert("Por favor, insira um nome");
+        alert("Por favor, insira o nome de um amigo");
     } else {
         // Adiciona o nome à lista de amigos
         listaDeAmigos.push(nomeAmigo);
