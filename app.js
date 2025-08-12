@@ -59,3 +59,28 @@ function atualizarLista() {
         listaAtualizada.appendChild(itemLista);
     }
 }
+
+// Cria uma função chamada 'sortearAmigo'
+function sortearAmigo() {
+    // Verifica se a lista de amigos está vazia
+    if (listaDeAmigos.length == 0) {
+        // Exibe um alerta pedindo para inserir nomes
+        alert("Por favor, insira um nome.");
+        return;
+    }
+
+    // Gera um índice aleatório dentro do tamanho da lista
+    let indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length);
+    // Seleciona o nome sorteado com base no índice aleatório
+    let nomeSorteado = listaDeAmigos[indiceAleatorio];
+
+    // Verifica se o nome sorteado é o próprio nome do usuário
+    if (nomeSorteado == nome) {
+        // Exibe um alerta informando que não pode sortear a si mesmo
+        alert("Você não pode ser seu próprio amigo secreto! Por favor, tente novamente.");
+        return;
+    }
+
+    // Exibe o resultado do sorteio na página
+    document.getElementById("resultado").innerHTML = `Seu amigo secreto é: ${nomeSorteado}`;
+}
